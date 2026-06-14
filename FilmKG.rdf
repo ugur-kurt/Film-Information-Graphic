@@ -139,19 +139,25 @@
 
     <!-- http://example.org/movie/Film -->
 
-    <owl:Class rdf:about="http://example.org/movie/Film"/>
+    <owl:Class rdf:about="http://example.org/movie/Film">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
     <!-- http://example.org/movie/Genre -->
 
-    <owl:Class rdf:about="http://example.org/movie/Genre"/>
+    <owl:Class rdf:about="http://example.org/movie/Genre">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
     <!-- http://www.co-ode.org/ontologies/ont.owl#Person -->
 
-    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Person"/>
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
