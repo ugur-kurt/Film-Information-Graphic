@@ -1,0 +1,2045 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/movie/"
+     xml:base="http://example.org/movie/"
+     xmlns:ns1="http://example.org/movie/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/movie/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/movie/actedIn -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/movie/actedIn"/>
+    
+
+
+    <!-- http://example.org/movie/directedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/movie/directedBy"/>
+    
+
+
+    <!-- http://example.org/movie/hasGenre -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/movie/hasGenre"/>
+    
+
+
+    <!-- http://example.org/movie/releaseDate -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/movie/releaseDate"/>
+    
+
+
+    <!-- http://example.org/movie/title -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/movie/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#actedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#actedIn">
+        <rdfs:domain rdf:resource="http://example.org/movie/Actor"/>
+        <rdfs:range rdf:resource="http://example.org/movie/Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#directedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#directedBy">
+        <rdfs:domain rdf:resource="http://example.org/movie/Film"/>
+        <rdfs:range rdf:resource="http://example.org/movie/Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#releaseYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#releaseYear">
+        <rdfs:domain rdf:resource="http://example.org/movie/Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#title">
+        <rdfs:domain rdf:resource="http://example.org/movie/Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/movie/Actor -->
+
+    <owl:Class rdf:about="http://example.org/movie/Actor">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/movie/Director -->
+
+    <owl:Class rdf:about="http://example.org/movie/Director">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/movie/Film -->
+
+    <owl:Class rdf:about="http://example.org/movie/Film">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/movie/Genre -->
+
+    <owl:Class rdf:about="http://example.org/movie/Genre">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Person -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/movie/Aaron_Eckhart -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Aaron_Eckhart">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Dark_Knight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Action -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Action">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Adam_Goldberg -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Adam_Goldberg">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/How_to_Lose_a_Guy_in_10_Days"/>
+        <actedIn rdf:resource="http://example.org/movie/Saving_Private_Ryan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Adrien_Brody -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Adrien_Brody">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Pianist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Adventure -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Adventure">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Alejandro_G._Iñárritu -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Alejandro_G._Iñárritu">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Alexander_Skarsgård -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Alexander_Skarsgård">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Northman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Alfie_Allen -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Alfie_Allen">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/John_Wick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Anne_Hathaway -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Anne_Hathaway">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Interstellar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Annie_Parisse -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Annie_Parisse">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/How_to_Lose_a_Guy_in_10_Days"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Anthony_Edwards -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Anthony_Edwards">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Zodiac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Anya_Taylor-Joy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Anya_Taylor-Joy">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Northman"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Witch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Barbara_Hershey -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Barbara_Hershey">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Black_Swan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Barry_Pepper -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Barry_Pepper">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Saving_Private_Ryan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Ben_Kingsley -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Ben_Kingsley">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Shutter_Island"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Benicio_del_Toro -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Benicio_del_Toro">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/One_Battle_After_Another"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Black_Swan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Black_Swan">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Darren_Aronofsky"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Horror"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2010-12-03</releaseDate>
+        <title>Black Swan</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Bong_Joon_Ho -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Bong_Joon_Ho">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Bonnie_Hunt -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Bonnie_Hunt">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Green_Mile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Brad_Pitt -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Brad_Pitt">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Se7en"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Carrie-Anne_Moss -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Carrie-Anne_Moss">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Matrix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Casey_Affleck -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Casey_Affleck">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Interstellar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Chad_Stahelski -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Chad_Stahelski">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Chase_Infiniti -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Chase_Infiniti">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/One_Battle_After_Another"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Chloë_Sevigny -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Chloë_Sevigny">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Zodiac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Christian_Bale -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Christian_Bale">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Dark_Knight"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Prestige"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Christoph_Waltz -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Christoph_Waltz">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Django_Unchained"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Christopher_Nolan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Christopher_Nolan">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Cillian_Murphy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Cillian_Murphy">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Dunkirk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Claes_Bang -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Claes_Bang">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Northman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Colin_Farrell -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Colin_Farrell">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Batman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Comedy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Comedy">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Crime -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Crime">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Darren_Aronofsky -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Darren_Aronofsky">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Daryl_Hannah -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Daryl_Hannah">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Kill_Bill:_Vol._1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/David_Carradine -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/David_Carradine">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Kill_Bill:_Vol._1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/David_Fincher -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/David_Fincher">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/David_Morse -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/David_Morse">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Green_Mile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Dean_Winters -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Dean_Winters">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/John_Wick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Demián_Bichir -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Demián_Bichir">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Hateful_Eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Denis_Villeneuve -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Denis_Villeneuve">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Django_Unchained -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Django_Unchained">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Quentin_Tarantino"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Western"/>
+        <releaseDate>2012-12-25</releaseDate>
+        <title>Django Unchained</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Domhnall_Gleeson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Domhnall_Gleeson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Revenant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Donald_Petrie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Donald_Petrie">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Drama -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Drama">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Dunkirk -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Dunkirk">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Christopher_Nolan"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/War"/>
+        <releaseDate>2017-07-19</releaseDate>
+        <title>Dunkirk</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Edward_Burns -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Edward_Burns">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Saving_Private_Ryan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Edward_Zwick -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Edward_Zwick">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Ellie_Grainger -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Ellie_Grainger">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Witch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Elliot_Page -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Elliot_Page">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Inception"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Emilia_Fox -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Emilia_Fox">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Pianist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Ethan_Coen -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Ethan_Coen">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Ethan_Hawke -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Ethan_Hawke">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Northman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Fantasy">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Fionn_Whitehead -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Fionn_Whitehead">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Dunkirk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Forrest_Goodluck -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Forrest_Goodluck">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Revenant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Forrest_Gump -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Forrest_Gump">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Robert_Zemeckis"/>
+        <hasGenre rdf:resource="http://example.org/movie/Comedy"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Romance"/>
+        <releaseDate>1994-06-23</releaseDate>
+        <title>Forrest Gump</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Frank_Darabont -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Frank_Darabont">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Frank_Finlay -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Frank_Finlay">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Pianist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Gary_Sinise -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Gary_Sinise">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Forrest_Gump"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Geoffrey_Rush -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Geoffrey_Rush">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Gloria_Foster -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Gloria_Foster">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Matrix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Gore_Verbinski -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Gore_Verbinski">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Gwyneth_Paltrow -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Gwyneth_Paltrow">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Se7en"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Harvey_Scrimshaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Harvey_Scrimshaw">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Witch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Heath_Ledger -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Heath_Ledger">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Dark_Knight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Hiroyuki_Sanada -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Hiroyuki_Sanada">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Last_Samurai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/History -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/History">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Horror -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Horror">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/How_to_Lose_a_Guy_in_10_Days -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/How_to_Lose_a_Guy_in_10_Days">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Donald_Petrie"/>
+        <hasGenre rdf:resource="http://example.org/movie/Comedy"/>
+        <hasGenre rdf:resource="http://example.org/movie/Romance"/>
+        <releaseDate>2003-02-07</releaseDate>
+        <title>How to Lose a Guy in 10 Days</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Hugh_Jackman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Hugh_Jackman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Prisoners"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Prestige"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Hugo_Weaving -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Hugo_Weaving">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Matrix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Inception -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Inception">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Christopher_Nolan"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Adventure"/>
+        <hasGenre rdf:resource="http://example.org/movie/Science_Fiction"/>
+        <releaseDate>2010-07-15</releaseDate>
+        <title>Inception</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Interstellar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Interstellar">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Christopher_Nolan"/>
+        <hasGenre rdf:resource="http://example.org/movie/Adventure"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Science_Fiction"/>
+        <releaseDate>2014-11-05</releaseDate>
+        <title>Interstellar</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Jack_Davenport -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Jack_Davenport">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Jake_Gyllenhaal -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Jake_Gyllenhaal">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Prisoners"/>
+        <actedIn rdf:resource="http://example.org/movie/Zodiac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/James_Cromwell -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/James_Cromwell">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Green_Mile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Jamie_Foxx -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Jamie_Foxx">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Django_Unchained"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Javier_Bardem -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Javier_Bardem">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/No_Country_for_Old_Men"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Jeffrey_Wright -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Jeffrey_Wright">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Batman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Jennifer_Jason_Leigh -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Jennifer_Jason_Leigh">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Hateful_Eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Jessica_Chastain -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Jessica_Chastain">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Interstellar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Joel_Coen -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Joel_Coen">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/John_Cassini -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/John_Cassini">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Se7en"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/John_Wick -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/John_Wick">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Chad_Stahelski"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2014-10-16</releaseDate>
+        <title>John Wick</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Johnny_Depp -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Johnny_Depp">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Joseph_Gordon-Levitt -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Joseph_Gordon-Levitt">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Inception"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Josh_Brolin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Josh_Brolin">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/No_Country_for_Old_Men"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kate_Dickie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kate_Dickie">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Witch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kate_Hudson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kate_Hudson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/How_to_Lose_a_Guy_in_10_Days"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kathryn_Hahn -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kathryn_Hahn">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/How_to_Lose_a_Guy_in_10_Days"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Keanu_Reeves -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Keanu_Reeves">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/John_Wick"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Matrix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Keira_Knightley -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Keira_Knightley">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kelly_Macdonald -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kelly_Macdonald">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/No_Country_for_Old_Men"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Ken_Watanabe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Ken_Watanabe">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Inception"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Last_Samurai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kenneth_Branagh -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kenneth_Branagh">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Dunkirk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kerry_Washington -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kerry_Washington">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Django_Unchained"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kurt_Russell -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kurt_Russell">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Hateful_Eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kyla_Nicolle -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kyla_Nicolle">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Lighthouse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Lana_Wachowski -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Lana_Wachowski">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Laurence_Fishburne -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Laurence_Fishburne">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Matrix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Leonardo_DiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Leonardo_DiCaprio">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Django_Unchained"/>
+        <actedIn rdf:resource="http://example.org/movie/Inception"/>
+        <actedIn rdf:resource="http://example.org/movie/One_Battle_After_Another"/>
+        <actedIn rdf:resource="http://example.org/movie/Shutter_Island"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Revenant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Lilly_Wachowski -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Lilly_Wachowski">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Logan_Hawkes -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Logan_Hawkes">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Lighthouse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Lucy_Liu -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Lucy_Liu">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Kill_Bill:_Vol._1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Maggie_Gyllenhaal -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Maggie_Gyllenhaal">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Dark_Knight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Maria_Bello -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Maria_Bello">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Prisoners"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Mark_Ruffalo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Mark_Ruffalo">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Mickey_17"/>
+        <actedIn rdf:resource="http://example.org/movie/Shutter_Island"/>
+        <actedIn rdf:resource="http://example.org/movie/Zodiac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Mark_Rylance -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Mark_Rylance">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Dunkirk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Martin_Scorsese -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Martin_Scorsese">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Matt_Reeves -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Matt_Reeves">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Matthew_McConaughey -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Matthew_McConaughey">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/How_to_Lose_a_Guy_in_10_Days"/>
+        <actedIn rdf:resource="http://example.org/movie/Interstellar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Maureen_Lipman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Maureen_Lipman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Pianist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Max_von_Sydow -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Max_von_Sydow">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Shutter_Island"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Michael_Caine -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Michael_Caine">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Interstellar"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Dark_Knight"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Prestige"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Michael_Clarke_Duncan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Michael_Clarke_Duncan">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Green_Mile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Michael_Nyqvist -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Michael_Nyqvist">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/John_Wick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Michelle_Williams -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Michelle_Williams">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Shutter_Island"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Mickey_17 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Mickey_17">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Bong_Joon_Ho"/>
+        <hasGenre rdf:resource="http://example.org/movie/Adventure"/>
+        <hasGenre rdf:resource="http://example.org/movie/Comedy"/>
+        <hasGenre rdf:resource="http://example.org/movie/Science_Fiction"/>
+        <releaseDate>2025-02-28</releaseDate>
+        <title>Mickey 17</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Mila_Kunis -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Mila_Kunis">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Black_Swan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Morgan_Freeman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Morgan_Freeman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Se7en"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Mykelti_Williamson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Mykelti_Williamson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Forrest_Gump"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Mystery -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Mystery">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Naomi_Ackie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Naomi_Ackie">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Mickey_17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Natalie_Portman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Natalie_Portman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Black_Swan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Nicole_Kidman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Nicole_Kidman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Northman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/No_Country_for_Old_Men -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/No_Country_for_Old_Men">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Ethan_Coen"/>
+        <directedBy rdf:resource="http://example.org/movie/Joel_Coen"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <hasGenre rdf:resource="http://example.org/movie/Western"/>
+        <releaseDate>2007-11-09</releaseDate>
+        <title>No Country for Old Men</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/One_Battle_After_Another -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/One_Battle_After_Another">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Paul_Thomas_Anderson"/>
+        <hasGenre rdf:resource="http://example.org/movie/Comedy"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2025-09-23</releaseDate>
+        <title>One Battle After Another</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Orlando_Bloom -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Orlando_Bloom">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Paul_Dano -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Paul_Dano">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Batman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Paul_Thomas_Anderson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Paul_Thomas_Anderson">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Peter_Crombie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Peter_Crombie">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Se7en"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Piper_Perabo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Piper_Perabo">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Prestige"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Prisoners -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Prisoners">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Denis_Villeneuve"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2013-09-19</releaseDate>
+        <title>Prisoners</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Quentin_Tarantino -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Quentin_Tarantino">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Ralph_Ineson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Ralph_Ineson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Witch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Rebecca_Hall -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Rebecca_Hall">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Prestige"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Regina_Hall -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Regina_Hall">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/One_Battle_After_Another"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Robert_Downey_Jr. -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Robert_Downey_Jr.">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Zodiac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Robert_Eggers -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Robert_Eggers">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Robert_Pattinson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Robert_Pattinson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Mickey_17"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Batman"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Lighthouse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Robert_Zemeckis -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Robert_Zemeckis">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Robin_Wright -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Robin_Wright">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Forrest_Gump"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Roman_Polanski -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Roman_Polanski">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Romance -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Romance">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Sally_Field -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Sally_Field">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Forrest_Gump"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Samuel_L._Jackson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Samuel_L._Jackson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Django_Unchained"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Hateful_Eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Saving_Private_Ryan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Saving_Private_Ryan">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Steven_Spielberg"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/History"/>
+        <hasGenre rdf:resource="http://example.org/movie/War"/>
+        <releaseDate>1998-07-24</releaseDate>
+        <title>Saving Private Ryan</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Science_Fiction -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Science_Fiction">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Se7en -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Se7en">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/David_Fincher"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Mystery"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>1995-09-22</releaseDate>
+        <title>Se7en</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Sean_Penn -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Sean_Penn">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/One_Battle_After_Another"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Shutter_Island -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Shutter_Island">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Martin_Scorsese"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Mystery"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2010-02-14</releaseDate>
+        <title>Shutter Island</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Steven_Spielberg -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Steven_Spielberg">
+        <rdf:type rdf:resource="http://example.org/movie/Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Steven_Yeun -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Steven_Yeun">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Mickey_17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Terrence_Howard -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Terrence_Howard">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Prisoners"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Batman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Batman">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Matt_Reeves"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Mystery"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2022-03-01</releaseDate>
+        <title>The Batman</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Dark_Knight -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Dark_Knight">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Christopher_Nolan"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2008-07-16</releaseDate>
+        <title>The Dark Knight</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Green_Mile -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Green_Mile">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Frank_Darabont"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Fantasy"/>
+        <releaseDate>1999-12-10</releaseDate>
+        <title>The Green Mile</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Hateful_Eight -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Hateful_Eight">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Quentin_Tarantino"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Mystery"/>
+        <hasGenre rdf:resource="http://example.org/movie/Western"/>
+        <releaseDate>2015-12-25</releaseDate>
+        <title>The Hateful Eight</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Last_Samurai -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Last_Samurai">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Edward_Zwick"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/War"/>
+        <releaseDate>2003-12-05</releaseDate>
+        <title>The Last Samurai</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Lighthouse -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Lighthouse">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Robert_Eggers"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Fantasy"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2019-10-18</releaseDate>
+        <title>The Lighthouse</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Matrix -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Matrix">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Lana_Wachowski"/>
+        <directedBy rdf:resource="http://example.org/movie/Lilly_Wachowski"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Science_Fiction"/>
+        <releaseDate>1999-03-31</releaseDate>
+        <title>The Matrix</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Northman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Northman">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Robert_Eggers"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Adventure"/>
+        <hasGenre rdf:resource="http://example.org/movie/Fantasy"/>
+        <releaseDate>2022-04-07</releaseDate>
+        <title>The Northman</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Pianist -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Pianist">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Roman_Polanski"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/War"/>
+        <releaseDate>2002-09-17</releaseDate>
+        <title>The Pianist</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Prestige -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Prestige">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Christopher_Nolan"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Mystery"/>
+        <hasGenre rdf:resource="http://example.org/movie/Science_Fiction"/>
+        <releaseDate>2006-10-19</releaseDate>
+        <title>The Prestige</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Revenant -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Revenant">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Alejandro_G._Iñárritu"/>
+        <hasGenre rdf:resource="http://example.org/movie/Adventure"/>
+        <hasGenre rdf:resource="http://example.org/movie/Drama"/>
+        <hasGenre rdf:resource="http://example.org/movie/Western"/>
+        <releaseDate>2015-12-25</releaseDate>
+        <title>The Revenant</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/The_Witch -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/The_Witch">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Robert_Eggers"/>
+        <hasGenre rdf:resource="http://example.org/movie/Horror"/>
+        <releaseDate>2016-02-19</releaseDate>
+        <title>The Witch</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Thomas_Kretschmann -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Thomas_Kretschmann">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Pianist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Thriller -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Thriller">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Timothy_Spall -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Timothy_Spall">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Last_Samurai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Tom_Cruise -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Tom_Cruise">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Last_Samurai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Tom_Hanks -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Tom_Hanks">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Forrest_Gump"/>
+        <actedIn rdf:resource="http://example.org/movie/Saving_Private_Ryan"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Green_Mile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Tom_Hardy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Tom_Hardy">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Dunkirk"/>
+        <actedIn rdf:resource="http://example.org/movie/Inception"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Revenant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Tom_Sizemore -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Tom_Sizemore">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Saving_Private_Ryan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Tommy_Lee_Jones -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Tommy_Lee_Jones">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/No_Country_for_Old_Men"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Toni_Collette -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Toni_Collette">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Mickey_17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Tony_Goldwyn -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Tony_Goldwyn">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Last_Samurai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Uma_Thurman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Uma_Thurman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Kill_Bill:_Vol._1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Valeriia_Karaman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Valeriia_Karaman">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Lighthouse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Vincent_Cassel -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Vincent_Cassel">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Black_Swan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Viola_Davis -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Viola_Davis">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Prisoners"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Vivica_A._Fox -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Vivica_A._Fox">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Kill_Bill:_Vol._1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Walton_Goggins -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Walton_Goggins">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Hateful_Eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/War -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/War">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Western -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Western">
+        <rdf:type rdf:resource="http://example.org/movie/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Will_Poulter -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Will_Poulter">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Revenant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Willem_Dafoe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Willem_Dafoe">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/John_Wick"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Lighthouse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Winona_Ryder -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Winona_Ryder">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/Black_Swan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Woody_Harrelson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Woody_Harrelson">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/No_Country_for_Old_Men"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Zodiac -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Zodiac">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/David_Fincher"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <hasGenre rdf:resource="http://example.org/movie/Mystery"/>
+        <hasGenre rdf:resource="http://example.org/movie/Thriller"/>
+        <releaseDate>2007-03-02</releaseDate>
+        <title>Zodiac</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Zoë_Kravitz -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Zoë_Kravitz">
+        <rdf:type rdf:resource="http://example.org/movie/Actor"/>
+        <actedIn rdf:resource="http://example.org/movie/The_Batman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Kill_Bill:_Vol._1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Kill_Bill:_Vol._1">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Quentin_Tarantino"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Crime"/>
+        <releaseDate>2003-10-10</releaseDate>
+        <title>Kill Bill: Vol. 1</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/movie/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl">
+        <rdf:type rdf:resource="http://example.org/movie/Film"/>
+        <directedBy rdf:resource="http://example.org/movie/Gore_Verbinski"/>
+        <hasGenre rdf:resource="http://example.org/movie/Action"/>
+        <hasGenre rdf:resource="http://example.org/movie/Adventure"/>
+        <hasGenre rdf:resource="http://example.org/movie/Fantasy"/>
+        <releaseDate>2003-07-09</releaseDate>
+        <title>Pirates of the Caribbean: The Curse of the Black Pearl</title>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
